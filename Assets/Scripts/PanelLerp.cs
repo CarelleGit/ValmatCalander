@@ -34,9 +34,9 @@ public class PanelLerp : MonoBehaviour
     {
         while (lerpSpeed != 0)
         {
-            lerpSpeed -= Time.deltaTime;
+            lerpSpeed -= Time.deltaTime * timer;
             panel.transform.position = Vector3.Lerp(startPoint.transform.position, endPoint.transform.position, lerpSpeed);    
-            yield return new WaitForSeconds(timer);
+            yield return new WaitForEndOfFrame();
             if(lerpSpeed  <= 0)
             {
                 lerpSpeed = 0;
@@ -48,9 +48,9 @@ public class PanelLerp : MonoBehaviour
     {
         while(lerpSpeed != 1)
         {
-            lerpSpeed += Time.deltaTime;
+            lerpSpeed += Time.deltaTime * timer;
             panel.transform.position = Vector3.Lerp(startPoint.transform.position, endPoint.transform.position, lerpSpeed);
-            yield return new WaitForSeconds(timer);
+            yield return new WaitForEndOfFrame();
             if(lerpSpeed >= 1)
             {
                 lerpSpeed = 1;
