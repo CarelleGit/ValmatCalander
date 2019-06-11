@@ -13,15 +13,4 @@ public class HoverOverButton : MonoBehaviour
         button = GetComponent<Button>();
         button.interactable = false;
     }
-
-    // Update is called once per frame
-    private void OnMouseEnter()
-    {
-        button.interactable = true;
-    }
-
-    private void OnMouseExit()
-    {
-        button.interactable = false;
-    }
 }
