@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CanvasSwitching : MonoBehaviour
 {
-    [SerializeField]
     private Animator currentAnimator;
-    [SerializeField]
-    private Animator nextAnimator;
-   public void SwitchingCanvas()
+    public void Start()
     {
-        
+        currentAnimator = GetComponent<Animator>();
+    }
+    public void SwitchingCanvas(Animator nextAnimator)
+    {
     }
 }
