@@ -8,6 +8,7 @@ public class EditingMonths : MonoBehaviour
     public InputField monthNewName;
     public Text monthName;
     public PanelLerp panel;
+    public MonthsContainer months;
 
     // Use this for initialization
     void Start()
@@ -16,7 +17,8 @@ public class EditingMonths : MonoBehaviour
     }
 
     public void SaveChanges()
-    {       
-            monthName.text = monthNewName.text;       
+    {
+        months.month.monthName = monthNewName.text;
+        monthName.text = months.month.monthName;
     }
 }
