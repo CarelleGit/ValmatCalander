@@ -14,11 +14,21 @@ public class EditingMonths : MonoBehaviour
     void Start()
     {
         panel = GetComponentInParent<PanelLerp>();
+        monthName.text = months.month.monthName;
+        if(monthName.text == "")
+        {
+            monthName.text = "Please Name";
+        }
+       if(monthName.text == "Please Name")
+        {
+
+            monthNewName.text = "Please Name";
+        }
     }
 
     public void SaveChanges()
     {
         months.month.monthName = monthNewName.text;
-        monthName.text = months.month.monthName;
+        monthName.text = months.month.monthName;       
     }
 }

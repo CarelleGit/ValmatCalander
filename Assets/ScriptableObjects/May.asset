@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fffe0f7fa5b48d469c74f19cae78b57, type: 3}
   m_Name: May
   m_EditorClassIdentifier: 
-  monthName: =D
+  monthName: May
+  holidays: []
   monthNumber: 5
   NumberOfDays: 31
   isLeapYear: 0
