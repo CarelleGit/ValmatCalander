@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class HoverOverButton : MonoBehaviour
 {
-    [SerializeField]
-    Button button;
-    // Use this for initialization
-    void Start()
+    
+    private void Start()
     {
-        button = GetComponent<Button>();
-        button.interactable = false;
+       
+    }
+    private void OnMouseEnter()
+    {
+        
     }
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monthName: July
   holidays: []
-  monthNumber: 31
-  NumberOfDays: 7
+  monthNumber: 7
+  NumberOfDays: 31
   isLeapYear: 0

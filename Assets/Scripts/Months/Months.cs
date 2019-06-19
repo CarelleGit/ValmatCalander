@@ -6,6 +6,7 @@ public struct Holidays
 {
     public string holidayName;
     public int day;
+    public int monthNumber;
     public string discription;
 }
 
