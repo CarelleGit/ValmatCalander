@@ -14,7 +14,7 @@ public class FadeSidePanels : MonoBehaviour
         {
             animator.SetTrigger("FadeIn");
         }
-        else
+        if(canvas.alpha >= 1 )
         {
             animator.SetTrigger("FadeOut");
         }
