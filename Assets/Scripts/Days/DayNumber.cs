@@ -11,6 +11,7 @@ public class DayNumber : MonoBehaviour
         if (clicked == false)
         {
             clicked = true;
+            HolidayCreation.SelectedDay = dayNumber;
         }
     }
 }
