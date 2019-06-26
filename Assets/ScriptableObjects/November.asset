@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fffe0f7fa5b48d469c74f19cae78b57, type: 3}
   m_Name: November
   m_EditorClassIdentifier: 
-  monthName: Nofapnovember
+  monthName: November
+  seasons: Autumn
   holidays: []
   monthNumber: 11
   NumberOfDays: 30

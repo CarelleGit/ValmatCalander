@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: October
   m_EditorClassIdentifier: 
   monthName: Octorber
+  seasons: Autumn
   holidays: []
   monthNumber: 10
   NumberOfDays: 31

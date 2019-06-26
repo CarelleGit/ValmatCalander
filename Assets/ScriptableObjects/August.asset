@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: August
   m_EditorClassIdentifier: 
   monthName: Augest
+  seasons: Summer
   holidays: []
   monthNumber: 8
   NumberOfDays: 31

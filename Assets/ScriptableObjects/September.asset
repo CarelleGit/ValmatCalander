@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: September
   m_EditorClassIdentifier: 
   monthName: September
+  seasons: Autumn
   holidays: []
   monthNumber: 9
   NumberOfDays: 30

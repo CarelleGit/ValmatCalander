@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: December
   m_EditorClassIdentifier: 
   monthName: December
+  seasons: Winter
   holidays: []
   monthNumber: 12
   NumberOfDays: 31

@@ -14,6 +14,7 @@ public struct Holidays
 public class Months : ScriptableObject
 {
     public string monthName;
+    public string seasons;
     public List<Holidays> holidays = new List<Holidays>();
     public int monthNumber;
     public int NumberOfDays;

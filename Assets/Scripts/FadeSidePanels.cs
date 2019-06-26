@@ -19,4 +19,12 @@ public class FadeSidePanels : MonoBehaviour
             animator.SetTrigger("FadeOut");
         }
     }
+
+    public void BackFading()
+    {
+        if (canvas.alpha >= 1)
+        {
+            animator.SetTrigger("FadeOut");
+        }
+    }
 }
