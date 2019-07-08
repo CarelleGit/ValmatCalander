@@ -25,7 +25,11 @@ public class DateTracker : MonoBehaviour
     public ParticleSystem autumn;
     public ParticleSystem winter;
 
-
+    void Wrapper()
+    {
+        var summerEmission = summer.emission;
+        summerEmission.enabled = false;
+    }
     public void SetDate()
     {
         if (Month.text == "" || day.text == "" || year.text == "")
@@ -34,7 +38,13 @@ public class DateTracker : MonoBehaviour
         }
         foreach (MonthsContainer item in months)
         {
-            CurrentDate.text = item.month.monthName + "-" + day.text + "-" + year.text;
+            Int32.TryParse(Month.text, out j);
+
+            if (item.month.monthNumber == j)
+            {
+                CurrentDate.text = item.month.monthName + "\n" + day.text + "-" + year.text;
+
+            }
 
         }
     }
@@ -57,10 +67,7 @@ public class DateTracker : MonoBehaviour
             {
                 default:
                 case "1":
-                    winter.Play();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Stop();
+                   
                     if (i > 31)
                     {
                         errorMessage.text = "This month contains only 31 days";
@@ -73,10 +80,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "2":
-                    winter.Play();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Stop();
+                    
                     if (i > 28)
                     {
                         errorMessage.text = "This month contains only 28 days";
@@ -89,10 +93,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "3":
-                    winter.Stop();
-                    spring.Play();
-                    autumn.Stop();
-                    summer.Stop();
+                    
                     if (i > 31)
                     {
                         error = false;
@@ -105,10 +106,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "4":
-                    winter.Stop();
-                    spring.Play();
-                    autumn.Stop();
-                    summer.Stop();
+               
                     if (i > 30)
                     {
                         error = false;
@@ -121,10 +119,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "5":
-                    winter.Stop();
-                    spring.Play();
-                    autumn.Stop();
-                    summer.Stop();
+              
                     if (i > 31)
                     {
                         error = false;
@@ -137,10 +132,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "6":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Play();
+                    
                     if (i > 30)
                     {
                         error = false;
@@ -153,10 +145,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "7":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Play();
+                   
                     if (i > 31)
                     {
                         error = false;
@@ -169,10 +158,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "8":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Play();
+                   
                     if (i > 30)
                     {
                         error = false;
@@ -185,10 +171,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "9":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Play();
-                    summer.Stop();
+                    
                     if (i > 31)
                     {
                         error = false;
@@ -201,10 +184,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "10":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Play();
-                    summer.Stop();
+                 
                     if (i > 31)
                     {
                         error = false;
@@ -217,10 +197,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "11":
-                    winter.Stop();
-                    spring.Stop();
-                    autumn.Play();
-                    summer.Stop();
+                   
                     if (i > 30)
                     {
                         error = false;
@@ -233,10 +210,7 @@ public class DateTracker : MonoBehaviour
                     }
                     break;
                 case "12":
-                    winter.Play();
-                    spring.Stop();
-                    autumn.Stop();
-                    summer.Stop();
+                    
                     if (i > 31)
                     {
                         error = false;
@@ -268,7 +242,7 @@ public class DateTracker : MonoBehaviour
             {
                 j = item.month.monthNumber;
                 currentMaxDays = item.month.NumberOfDays;
-                if (item.month.monthNumber == 12 && i == item.month.NumberOfDays + 1)
+                if (item.month.monthNumber == 12 && i == item.month.NumberOfDays)
                 {
                     Int32.TryParse(year.text, out l);
                     l++;
@@ -306,7 +280,7 @@ public class DateTracker : MonoBehaviour
                         summer.gameObject.SetActive(false);
                         break;
                 }
-                CurrentDate.text = item.month.monthName + "\n" + day.text + "-" + year.text;
+                CurrentDate.text = item.month.monthName + "\n" + i  + "-" + year.text;
             }
         }
         if (i == currentMaxDays + 1)
