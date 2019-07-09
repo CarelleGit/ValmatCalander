@@ -11,6 +11,9 @@ public class HolidayCreation : MonoBehaviour
     public InputField holidayName;
     public InputField holidayDiscription;
 
+    public GameObject panalContainor;
+    public GameObject prefab;
+
     public void Create(Days days)
     {
         months = days.selectedMonth;
@@ -25,6 +28,13 @@ public class HolidayCreation : MonoBehaviour
         holiday.day = SelectedDay;
         return holiday;
         
+    }
+
+    public void CreateHolidays()
+    {
+        GameObject temp;
+        temp = Instantiate(prefab);
+        temp.transform.SetParent(panalContainor.gameObject.transform);
     }
 
 }
