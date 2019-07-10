@@ -13,7 +13,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monthName: Octorber
   seasons: Autumn
-  holidays: []
+  holidays:
+  - holidayName: 'Bleep Boop '
+    day: 30
+    monthNumber: 10
+    discription: Beep boop day of death
+  - holidayName: hel
+    day: 30
+    monthNumber: 10
+    discription: lo
+  - holidayName: hel
+    day: 30
+    monthNumber: 10
+    discription: lo
   monthNumber: 10
   NumberOfDays: 31
   isLeapYear: 0
