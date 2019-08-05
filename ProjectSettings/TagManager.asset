@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Particles
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Forground
+    uniqueID: 2320170973
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

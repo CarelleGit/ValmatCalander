@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: July
   m_EditorClassIdentifier: 
   monthName: July
+  seasons: Summer
   holidays: []
   monthNumber: 7
   NumberOfDays: 31

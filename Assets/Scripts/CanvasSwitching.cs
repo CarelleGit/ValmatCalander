@@ -9,7 +9,7 @@ public class CanvasSwitching : MonoBehaviour
     public CanvasGroup nextCanvas;
     public void Start()
     {
-       
+        
     }
     public void SwitchingCanvas()
     {

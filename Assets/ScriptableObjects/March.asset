@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: March
   m_EditorClassIdentifier: 
   monthName: March
+  seasons: Spring
   holidays: []
   monthNumber: 3
   NumberOfDays: 31
